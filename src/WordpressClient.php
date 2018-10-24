@@ -49,6 +49,11 @@ class WordpressClient
     {
         return Zttp::get($this->url('/media'), $params);
     }
+    
+    public function mediaById($media_id = 1)
+    {
+        return Zttp::get($this->url('/media/'.$media_id));
+    }
 
     public function users(array $params = [])
     {
